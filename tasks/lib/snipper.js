@@ -19,11 +19,11 @@ exports.init = function() {
 				this.render = function() {
 					var fc = fs.readFileSync(this.source, 'utf8');
 					var templated = _.template(fc, {
-						hp: this,
+						$: this,
 						_: _
 					});
 					return templated({
-						hp: this,
+						$: this,
 						_: _
 					});
 				}
