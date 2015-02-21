@@ -35,5 +35,10 @@
   "files": [
     "tasks",
     "LICENSE-MIT"
+  ],
+  "ignore": [
+    "index.html",
+    "images/",
+    "styles/"
   ]
 }
