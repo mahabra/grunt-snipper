@@ -37,6 +37,7 @@
     "LICENSE-MIT"
   ],
   "ignore": [
+  	"demo/",
     "index.html",
     "images/",
     "styles/"
