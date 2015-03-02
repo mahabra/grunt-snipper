@@ -11,12 +11,14 @@ exports.init = function() {
 		}
 
 		this.getFile = function(source) {
+
 			var hp = this;
 			return new (function(source) {
 				this.source = source;
 				this.dirname = path.dirname(source);
 				/* Render this file */
 				this.render = function() {
+
 					var fc = fs.readFileSync(this.source, 'utf8');
 					var templated = _.template(fc, {
 						$: this,
