@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-snipper",
   "description": "Bonding of the fragments of the file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/morulus/grunt-contrib-snipper",
   "author": {
     "name": "Vladimir Kalmykov",
