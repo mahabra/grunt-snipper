@@ -24,7 +24,9 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "underscore": "latest"
+    "underscore": "~2.2.1",
+    "chalk": "~1.0.0"
+    
   },
   "devDependencies": {
     "grunt": "^0.4.2"
