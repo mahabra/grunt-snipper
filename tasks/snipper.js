@@ -1,4 +1,5 @@
 var path = require('path');
+var chalk = require('chalk');
 module.exports = function( grunt ) {
 	 // Internal lib.
   	var uglify = require('./lib/snipper.js').init(grunt);
