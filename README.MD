@@ -58,6 +58,3 @@ Also snippets can have own snippets. Paths to childs files are relative. Therefo
 /modules/mymodule.js
 /modules/mymodule/functions/foo.js
 ```
-
-## Descript
-http://morulus.github.io/grunt-contrib-snipper/
