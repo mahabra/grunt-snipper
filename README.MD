@@ -8,7 +8,7 @@ This plugin requires [Grunt](http://gruntjs.com/).
 
 ## Get it
 ```shell
-npm in grunt-contrib-snipper
+npm i grunt-contrib-snipper
 ```
 
 ## Use it
@@ -52,12 +52,9 @@ var submodule = {
 };
 ```
 
-Also snippets can have own snippets. Ways to childs files are relative. Therefore, in this case it is convenient to use a hierarchical structure.
+Also snippets can have own snippets. Paths to childs files are relative. Therefore, in this case it is convenient to use a hierarchical structure.
 ```
 /main.js
 /modules/mymodule.js
 /modules/mymodule/functions/foo.js
 ```
-
-## Descript
-http://morulus.github.io/grunt-contrib-snipper/
