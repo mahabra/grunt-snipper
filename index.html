@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Grunt-contrib-snipper — конструктор файлов для Grunt</title>
+	<title>grunt-snipper — конструктор файлов для Grunt</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Конструктор файлов">
 	<meta name="keywords" content="grunt npm snipper plugin">
@@ -15,10 +15,6 @@
 	<link rel="stylesheet" href="demo/styles/hightlight-style.css" />
 	
 	<script src="demo/vendor.js" baseurl="" no-bower></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/javascript.min.js"></script>
-	<script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
 	<section>
@@ -26,7 +22,7 @@
 			<div class="row">
 				<div class="col-sm-6">
 					
-					<h1>Grunt-contrib-snipper</h1>
+					<h1>grunt-snipper</h1>
 					<summary class="white" id="descript">
 					Осуществляет сборку файлов из сниппетов в случаях, когда необходимо создать один большой файл, для удобства разработки разбитый на множество подфайлов. Поддерживает бесконечную вложенность.
 					</summary>
@@ -36,7 +32,7 @@
 				<div class="col-sm-6">
 					<h2>Установка</h2>
 					<summary>Этот плагин требует node.js и Grunt</summary>
-					<summary><pre><code>npm install grunt-contrib-snipper</code></pre></summary>
+					<summary><pre><code>npm install grunt-snipper</code></pre></summary>
 					
 				</div>
 				<div class="col-sm-12">
@@ -62,7 +58,7 @@
 		}
 	}
 });
-grunt.loadNpmTasks('grunt-contrib-snipper');
+grunt.loadNpmTasks('grunt-snipper');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.registerTask('default', ['watch','snipper']);
 </code></pre>
@@ -71,22 +67,22 @@ grunt.registerTask('default', ['watch','snipper']);
 				</div>
 				<div class="col-md-12">
 					
-					<summary>Сообщить об ошибке: <a href="https://github.com/morulus/grunt-contrib-snipper/issues">https://github.com/morulus/grunt-contrib-snipper/issues</a></summary>
+					<summary>Сообщить об ошибке: <a href="https://github.com/morulus/grunt-snipper/issues">https://github.com/morulus/grunt-snipper/issues</a></summary>
 					
 					<summary>
 						<div class="bar">
 							<span><!-- Put this script tag to the place, where the Share button will be -->
 	<script type="text/javascript"><!--
 	document.write(VK.Share.button({
-		url: "http://morulus.github.io/grunt-contrib-snipper/",
+		url: "http://morulus.github.io/grunt-snipper/",
 		title:document.getElementsByTagName('title')[0].innerText,
-		image:"http://morulus.github.io/grunt-contrib-snipper/images/grunt-contrib-snipperjs.png",
+		image:"http://morulus.github.io/grunt-snipper/images/grunt-snipperjs.png",
 		description: document.getElementById('descript').innerText,
 		noparse: true
 	},{type: "button_nocount", text: "Запостить"}));
 	--></script>
 							</span>
-							<span><div class="fb-share-button" data-href="http://morulus.github.io/grunt-contrib-snipper/" data-layout="button"></div></span>
+							<span><div class="fb-share-button" data-href="http://morulus.github.io/grunt-snipper/" data-layout="button"></div></span>
 						</div>
 				</summary>
 					
@@ -102,8 +98,11 @@ grunt.registerTask('default', ['watch','snipper']);
 				<article>Автор — <a href="http://github.com/morulus/" title="Vladimir Kalmykov (@morulus)" class="contac hint">@morulus<img src="demo/images/morulus.png" /></a>. Версия: <span class="version" id="version">1.4</span></article>
 		</div>
 	</section>
-	<a href="https://github.com/morulus/grunt-contrib-snipper/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+	<a href="https://github.com/morulus/grunt-snipper/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
 	<div id="fb-root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/languages/javascript.min.js"></script>
+	<script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -116,7 +115,5 @@ grunt.registerTask('default', ['watch','snipper']);
 	vendor.getJson('package.json', function(info) { 
 		document.getElementById('version').innerHTML = info.version;
 	});
-
-
 </script>
 </html>

@@ -1,4 +1,4 @@
-grunt-contrib-snipper
+grunt-snipper
 --
 
 >Allows you to split files into snippets, that placed in different files. It uses Underscore to build it.
@@ -8,7 +8,7 @@ This plugin requires [Grunt](http://gruntjs.com/).
 
 ## Get it
 ```shell
-npm i grunt-contrib-snipper
+npm i grunt-snipper
 ```
 
 ## Use it
@@ -27,7 +27,7 @@ grunt.initConfig({
 	  }
 	}
 });
-grunt.loadNpmTasks('grunt-contrib-snipper');
+grunt.loadNpmTasks('grunt-snipper');
 grunt.registerTask('default', ['snipper']);
 ```
 
