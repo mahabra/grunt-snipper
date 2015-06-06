@@ -34,7 +34,7 @@ grunt.registerTask('default', ['snipper']);
 File must have classic syntax of templates `<%=%>`. To insert content of file, you should use function `$.snippet(filename)` inside the `<%=%>`.
 
 ```html
-var submodule = <%=$.snippet('submodule.js')%>;
+var submodule = <%=template('submodule.js')%>;
 </div>
 ```
 

@@ -2,7 +2,7 @@ var path = require('path');
 var chalk = require('chalk');
 module.exports = function( grunt ) {
 	 // Internal lib.
-  	var snipper = require('./lib/snipper.js').init(grunt);
+  	var uglify = require('./lib/snipper.js').init(grunt);
   	 grunt.registerMultiTask('snipper', 'The assembly of file fragments', function() {
   	 	var options = this.options({
 	      compress: false
@@ -10,7 +10,7 @@ module.exports = function( grunt ) {
 
 	    // Iterate over all src-dest file pairs.
 	    this.files.forEach(function (f) {
-	    	
+	    
 	      var src = f.src.filter(function (filepath) {
 
 	        // Warn on and remove invalid source files (if nonull was set).
@@ -22,16 +22,14 @@ module.exports = function( grunt ) {
 	        }
 	      });
 
-
 	      if (src.length === 0) {
 	        grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because src files were empty.');
 	        return;
 	      }
 	      src.forEach(function(file) {
 	         var fn = path.basename(file);
-	         var dest = f.dest+(f.dest.substr(-1)=='/' ? fn : '');
-	         snipper.render(process.cwd()+'/'+file, process.cwd()+'/'+dest);
-	      	 grunt.log.writeln('File '+file+' rendered to '+dest);
+	         uglify.render(process.cwd()+'/'+file, process.cwd()+'/'+f.dest+fn);
+	      	 grunt.log.writeln('File '+file+' rendered to '+f.dest+fn);
 	      });
 	    
 	    });

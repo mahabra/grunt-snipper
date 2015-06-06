@@ -12,26 +12,21 @@ exports.init = function() {
 
 		this.getFile = function(source) {
 			var hp = this;
+
 			return new (function(source) {
 				this.source = source;
 				this.dirname = path.dirname(source);
 				/* Render this file */
 				this.render = function() {
 					var fc = fs.readFileSync(this.source, 'utf8');
-					var templated = _.template(fc, {
-						$: this,
-						_: _
-					});
+					var templated = _.template(fc);
 					return templated({
-						$: this,
-						_: _
-					});
-				}
-				/* Render subfile */
-				this.snippet = function(filepath) {
+						template : function(filepath) {
 
-					var fh = hp.getFile(this.dirname+(filepath.substring(0,1)=='/' ? '':'/')+filepath);
-					return fh.render();
+							var fh = hp.getFile(this.dirname+(filepath.substring(0,1)=='/' ? '':'/')+filepath);
+							return fh.render();
+						}.bind(this)
+					});
 				}
 			})(source);
 		};
